@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>DoorPi Form</title>
+    
+    
+    
+    
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <div class="wrapper">
+	
+	<form class="center_form" method="post" action="index.html">
+	<h2>Configure your DoorPi<br></h2>
+	<h4>Users</h4>
+	<div>
+		<input class="name" placeholder="User 1" name="name0" type="text">
+		<input class="phone" placeholder="phone" name="number1" maxlength="10" type="text">
+	</div>
+	<div>
+		<input class="name" placeholder="User 2" name="name0" maxlength="10" type="text">
+		<input class="phone" placeholder="phone" name="number2" type="text">
+		</div>
+	<h4>Sound File</h4>
+	<select name="day" id="daybt">
+      <option value="1">Chime</option><br><br>
+      <option value="1">Guitar</option><br><br>
+      <option value="1">Atari 1</option><br><br>
+      <option value="1">Atari 2</option><br><br>
+	</select><br>
+		<h4>Sound Volume</h4>
+		<input type="range" value="75" min="0" max="100">
+	<h4>Pulse Pattern</h4>	<select name="day" id="daybt">
+      <option value="1">Pulse Pattern 1</option><br><br>
+      <option value="1">Pulse Pattern 2</option><br><br>
+      <option value="1">Pulse Pattern 3</option><br><br>
+	</select><br>
+	<input id="saveBtn" name="send" value="Save" type="submit"><br><br>
+</form>
+	
+</div>
+    
+    
+    
+    
+    
+  </body>
+</html>

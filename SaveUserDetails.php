@@ -1,0 +1,24 @@
+<?php 
+
+//error_reporting(E_ALL);
+//ini_set('display_errors', 1);
+
+// Save User Details will get the details from UI welcome page
+// and generate our JSON feed that the python script will later 
+// read from when the door bell is saved.
+// Grab the details from the POST Request
+$User0Name = $_POST["User0Name"];
+$User0PhoneNumber = $_POST["User0PhoneNumber"];
+$User1Name = $_POST["User1Name"];
+$User1PhoneNumber = $_POST["User1PhoneNumber"];
+
+
+
+
+// Assemble the JSON Feed so that we can reference our users by the Python Script
+$JSON = '{"User0":{"Name":"'.$User0Name.'", "Number":"'.$User0PhoneNumber.'"},"User1":{"Name":"'.$User1Name.'","Number":"'.$User1PhoneNumber.'"}}';
+// save the JSON String to the Users.JSON file so that we can reference it later.
+$UsersFile = fopen("/DoorPi/Users.JSON", "w") or die("Unable to open file!");
+fwrite($UsersFile, $JSON);
+fclose($myfile);
+?>
